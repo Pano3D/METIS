@@ -9,7 +9,7 @@ partitioning schemes developed in our lab.
 
 You can download METIS by simply cloning it using the command:
 ```
-git clone https://github.com/KarypisLab/METIS.git
+git clone https://github.com/Pano3D/METIS.git
 ```
 
 ## Building standalone METIS binaries and library
@@ -32,10 +32,11 @@ In addition, you need to download and install
 
 ### Building and installing METIS  
 
-METIS is primarily configured by passing options to make config. For example:
+METIS is primarily configured by passing options through cmake. For example:
 
 ```
-make config shared=1 cc=gcc prefix=~/local
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ../
 make install
 ```
 
